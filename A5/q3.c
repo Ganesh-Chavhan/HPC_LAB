@@ -1,4 +1,13 @@
-// mv_mult.c
+// Compile: gcc -fopenmp q3.c -o mv_mult
+// Run: ./mv_mult
+
+// This program multiplies a matrix by a vector.
+// It uses OpenMP to parallelize the loop.
+// The matrix is initialized with values of 0.5.
+// The vector is initialized with values of 1.0.
+// The program prints the time taken to multiply the matrix by the vector.
+// It also prints the first and last elements of the resulting vector.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>

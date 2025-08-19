@@ -1,7 +1,10 @@
-/* q1.c
-   Compile: gcc -fopenmp q1.c -o fib
-   Run: ./fib <n> <num_threads>
-*/
+// Compile: gcc -fopenmp q1.c -o fib
+// Run: ./fib <n> <num_threads>
+
+// This program calculates the Fibonacci sequence using OpenMP tasks.
+// It uses memoization to store previously calculated Fibonacci numbers.
+// The program prints the time taken to calculate the Fibonacci sequence.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>

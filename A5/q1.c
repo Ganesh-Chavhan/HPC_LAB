@@ -1,4 +1,12 @@
-// mm_mult.c
+// Compile: gcc -fopenmp q1.c -o mm_mult
+// Run: ./mm_mult
+
+// This program multiplies two matrices.
+// It uses OpenMP to parallelize the loop.
+// The matrices are initialized with values of 1.0.
+// The program prints the time taken to multiply the matrices.
+// It also prints the checksum of the resulting matrix.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>

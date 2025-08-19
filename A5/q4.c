@@ -1,4 +1,12 @@
-// prefix_sum.c
+// Compile: gcc -fopenmp q4.c -o prefix_sum
+// Run: ./prefix_sum
+
+// This program computes the prefix sum of an array.
+// It uses OpenMP to parallelize the loop.
+// The array is initialized with values of 1.0.
+// The program prints the time taken to compute the prefix sum.
+// It also prints the first and last elements of the resulting array.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>

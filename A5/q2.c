@@ -1,4 +1,13 @@
-// mm_scalar.c
+// Compile: gcc -fopenmp q2.c -o mm_scalar
+// Run: ./mm_scalar
+
+// This program multiplies a scalar by a matrix.
+// It uses OpenMP to parallelize the loop.
+// The matrix is initialized with values from 0 to 99.
+// The scalar is 2.5.
+// The program prints the time taken to multiply the scalar by the matrix.
+// It also prints the first and last elements of the resulting matrix.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>

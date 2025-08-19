@@ -1,7 +1,10 @@
-/* q2.c
-   Compile: gcc -fopenmp q2.c -o prodcons
-   Run: ./prodcons <buffer_size> <items_to_produce> <num_producers> <num_consumers>
-*/
+// Compile: gcc -fopenmp q2.c -o prodcons
+// Run: ./prodcons <buffer_size> <items_to_produce> <num_producers> <num_consumers>
+
+// This program implements a producer-consumer problem using OpenMP.
+// It uses a buffer to store items produced by producers and consumed by consumers.
+// The program prints the time taken to produce and consume all items.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
