@@ -7,7 +7,7 @@ int main() {
     double pi = 0.0;
 
     double start = omp_get_wtime();
-
+    
     #pragma omp parallel
     {
         double x, sum = 0.0;

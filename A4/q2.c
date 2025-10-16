@@ -104,7 +104,7 @@ int main(int argc, char **argv) {
 
     double t1 = omp_get_wtime();
     printf("All done. Time: %f sec\n", t1 - t0);
-
+    
     omp_destroy_lock(&lock_in);
     omp_destroy_lock(&lock_out);
     free(buffer);
