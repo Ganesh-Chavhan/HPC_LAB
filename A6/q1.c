@@ -1,5 +1,6 @@
 // Hello World with 10 processes
-
+// Compile: mpicc q1.c -o hello
+// run code: mpirun --oversubscribe -n 10 ./hello
 #include <mpi.h>
 #include <stdio.h>
 

@@ -1,13 +1,15 @@
 // Sum of array elements
-// mpicc q5.c -o q5
-// ./q5
+// Compile: mpicc q5.c -o sum
+// run code: mpirun --oversubscribe -n 2 ./sum
 #include <mpi.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char** argv) {
     int rank, size;
     int n = 8;
-    int arr[8] = {2, 4, 6, 8, 10, 12, 14, 16};
+    int arr[8] = {1, 2, 3, 4, 5, 6, 7, 8};
+    
 
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);

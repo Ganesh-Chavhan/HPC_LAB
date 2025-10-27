@@ -1,4 +1,6 @@
 // Rank and Communicator Group with 5 processes
+// Compile: mpicc q2.c -o rank
+// run code: mpirun --oversubscribe -n 5 ./rank
 #include <mpi.h>
 #include <stdio.h>
 

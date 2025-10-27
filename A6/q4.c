@@ -1,4 +1,6 @@
 // Ring communication
+// Compile: mpicc q4.c -o ring
+// run code: mpirun --oversubscribe -n 4 ./ring
 #include <mpi.h>
 #include <stdio.h>
 
@@ -15,9 +17,12 @@ int main(int argc, char** argv) {
 
     MPI_Send(&send_data, 1, MPI_INT, right, 0, MPI_COMM_WORLD);
     MPI_Recv(&recv_data, 1, MPI_INT, left, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-
+    printf("Process %d sent %d to process %d\n", rank, send_data, right);
     printf("Process %d received %d from process %d\n", rank, recv_data, left);
+    printf("--------------------------------\n");
 
     MPI_Finalize();
     return 0;
 }
+
+// ex: 0->1->2->3->0

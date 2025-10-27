@@ -1,4 +1,6 @@
 // Matrix-Vector Multiplication
+// Compile: mpicc q1.c -o matvec
+// Run: mpirun --oversubscribe -n 4 ./matvec
 #include <mpi.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,8 +18,8 @@ int main(int argc, char** argv) {
 
     int rows_per_proc = N / size;
 
-    int a_sub[rows_per_proc][N];
-    int y_sub[rows_per_proc];
+    int a_sub[rows_per_proc][N]; // local matrix A
+    int y_sub[rows_per_proc]; // local vector y
 
     // Initialize matrix and vector only in rank 0
     if (rank == 0) {
